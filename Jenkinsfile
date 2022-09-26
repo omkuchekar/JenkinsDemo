@@ -1,14 +1,22 @@
 pipeline {
     agent any
         stages{
-            stage('HellVerify branch'){
+            stage('Verify branch'){
                 steps{
                     echo "$GIT_BRANCH"
                 }
             }
-            stage('Hello from bash script'){
+            stage('Docker build'){
                 steps{
-                   sh 'echo \'Hello from shell script\''
+                   pwsh(script: 'docker images -a')
+                   pwsh(script :"""
+                   cd JenkinsDemo/
+                   docker images -a
+                   docker build -t jenkine-pipeline .
+                   docker images -a
+                   cd...
+                   """
+                   )
                 }
             }
         }
