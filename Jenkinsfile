@@ -3,7 +3,7 @@ pipeline {
         stages{
             stage('HellVerify branch'){
                 steps{
-                    echo '$GIT_BRANCH'
+                    echo "$GIT_BRANCH"
                 }
             }
             stage('Hello from bash script'){
