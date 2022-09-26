@@ -1,14 +1,9 @@
 pipeline {
     agent any
         stages{
-            stage('Hello'){
+            stage('HellVerify branch'){
                 steps{
-                    echo 'hello'
-                }
-            }
-            stage('Bye'){
-                steps{
-                    echo 'Bye'
+                    echo $GIT_BRANCH
                 }
             }
             stage('Hello from bash script'){
