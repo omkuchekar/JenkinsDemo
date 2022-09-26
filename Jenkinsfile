@@ -10,7 +10,6 @@ pipeline {
                 steps {
                         sh '''#!/bin/bash
                               docker images -a
-                              cd https://github.com/omkuchekar/JenkinsDemo/
                               docker build -t jenkine-pipeline .
                               docker images -a
                               cd...
