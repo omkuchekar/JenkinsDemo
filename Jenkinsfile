@@ -10,7 +10,7 @@ pipeline {
                 steps {
                         sh '''#!/bin/bash
                               docker images -a
-                              cd .jenkins/workspace/azure-vote
+                              cd azure-vote/
                               docker build -t jenkine-pipeline .
                               docker images -a
                         '''
