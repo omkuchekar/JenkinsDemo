@@ -1,9 +1,11 @@
-pipelines{
-    stages{
-        stage ('git branch'){
-            echo $GIT_BRANCH
-            echo "branch name"
+Pipeline{
+   agent any{
+      stages{
+         stage ('git branch'){
+               echo $GIT_BRANCH
+               echo "branch name"
 
-        }
-    }
+         }
+      }
+   }
 }
