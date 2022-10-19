@@ -3,8 +3,8 @@ pipeline {
         stages {
             stage ('verify branch'){
                steps{
-                   "$GIT_BRANCH"
-                   "my branch"
+                  echo "$GIT_BRANCH"
+                  echo "my branch"
             }
             stage ('bash scripting'){
                sh '''#!/bin/bash
