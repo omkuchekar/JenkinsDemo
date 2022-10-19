@@ -10,7 +10,7 @@ pipeline {
             stage('bash scripting'){
                steps{
                   sh '''#!/bin/bash
-                  date               
+                  mkdir testing1               
                   '''
                }
             }
