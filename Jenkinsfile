@@ -1,12 +1,11 @@
 pipeline {
    agent any{
-      stages{
-         stage ('git branch'){
-               echo $GIT_BRANCH
-               echo "branch name"
-
+      stages {
+         stage ('verify branch'){
+            echo $GIT_BRANCH
+            echo "my branch"
          }
       }
+
    }
-   
 }
