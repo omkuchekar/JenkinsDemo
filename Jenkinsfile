@@ -11,7 +11,7 @@ pipeline {
                         sh '''#!/bin/bash
                               docker images -a
                               cd azure-vote/
-                              docker build -t jenkine-pipeline .
+                              docker build -t jenkine-pipelines .
                               docker images -a
                         '''
                }
