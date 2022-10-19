@@ -8,9 +8,11 @@ pipeline {
             }            
          }
             stage('bash scripting'){
-               sh '''#!/bin/bash
-               date               
-               '''
+               steps{
+                  sh '''#!/bin/bash
+                  date               
+                  '''
+               }
             }
       }
 }
