@@ -5,7 +5,7 @@ pipeline {
                 steps{
                     echo "$GIT_BRANCH"
                 }
-            }
+            } 
             stage('Docker build using bash script') {
                 steps {
                         sh '''#!/bin/bash
